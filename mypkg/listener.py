@@ -1,7 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from person_msgs import Person
-
+from person_msgs.msg import Person
 
 rclpy.init()
 node = Node("listener")
@@ -9,7 +8,7 @@ node = Node("listener")
 
 def cb(msg):
     global node
-    node.get_logger().info("Listen: %d" % msg)
+    node.get_logger().info("Listen: %s" % msg.age)
 
 
 def main():
