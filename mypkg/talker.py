@@ -1,10 +1,10 @@
 import rclpy
 from rclpy.node import Node
-from person_msg.msg import Person
+from person_msgs.msg import Person
 
 rclpy.init()
 node = Node("talker")
-pub = node.create_publisher(Person, "countup", 10)
+pub = node.create_publisher(Person, "person", 10)
 n = 0
 
 
